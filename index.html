@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Election Security Application</h1>
+        <div class="icontainer">
+            <label for="input"> <h2>Enter an Incident</h2></label>
+        <textarea id="textarea" rows="4" placeholder="Enter an incident"></textarea>
+        <button id="submit" type="submit" onclick="enterIssue()">Add an incident</button>
+        </div>
+      
+
+        <div class="incidents">
+        <h2>Ongoing Incidents</h2>
+        <ul>
+            <li id="case2"></li>
+            <li id="case1"> They stole a ballot box in Mowe, Ibafo</li>
+        </ul>
+         
+        </div>
+        
+        <button id="btn">Browse All incidents</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
