@@ -25,6 +25,7 @@ body{
 
 
 h1{
+ 
     margin-bottom: 0.5em;
     text-align: center;
 }
@@ -64,4 +65,36 @@ textarea{
     font-size: 1rem;
     max-width: 80%;
     width: 500px;
+}
+
+@media only screen and (max-width: 425px){
+
+bodY{
+    text-align: center;
+}
+    h1{
+        font-size: 1.5rem;
+        margin-bottom: 0.8em;
+      
+    }
+    
+    h2{
+        font-size: 1.2rem;
+    
+    }
+    
+    button{
+        font-size: 1rem;
+    }
+
+    textarea{
+        font-size: 1rem;
+        max-width: 100%;
+        
+    }
+
+    ul{
+        text-align: left;
+        font-size: 1rem;
+    }
 }
