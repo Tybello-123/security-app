@@ -1,4 +1,5 @@
 document.getElementById("submit").addEventListener("click",enterIssue);
+let browse = document.getElementById("browse-btn").addEventListener("click",browseIncidents);
 
 
 function enterIssue() {
@@ -9,16 +10,17 @@ function enterIssue() {
     let incident = document.getElementById("textarea").value;
     //get the value of the textarea element input
 
-    listItem.innerHTML = incident;
     //assign the value of the list item to the incident
+          listItem.innerHTML = incident;
 
-  
-    document.getElementById("crime-list").appendChild(listItem);
+       let newListItem =    document.getElementById("crime-list").appendChild(listItem);
     //get the id of the parent element and append the child
 
- clearInput()
+      clearInput()
+
+      return newListItem
 }
-enterIssue();
+// enterIssue();
 
 function clearInput(){
   let clear = document.getElementById("textarea");
@@ -27,6 +29,37 @@ function clearInput(){
       
     }
 }
+
+
+
+function browseIncidents(){
+ console.log("BrowseIncidents");
+
+}
+
+
+// function browseIncidents() {
+//    let newFullListItem = document.createElement("LI");
+
+
+//   let newIncident = document.getElementById("full-crime-list")
+
+//   newFullListItem.textContent = newListItem
+   
+//   newIncident.appendChild(newListFullItem)
+
+ 
+// }
+
+// function list(){
+
+// }
+
+// list()
+
+
+
+
 
 // if (process.browser) {
 //     console.log("code is running in a browser environment")
