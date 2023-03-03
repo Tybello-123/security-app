@@ -9,11 +9,14 @@
 </head>
 <body>
     <div class="container">
+        <form id="form">
+
         <h1>Election Security Application</h1>
+        
         <div class="icontainer">
             <label for="input"> <h2>Enter an Incident</h2></label>
         <textarea id="textarea" rows="4" placeholder="Enter an incident"></textarea>
-        <button id="submit" type="submit">Add an incident</button>
+        <button id="submit">Add an incident</button>
         </div>
        
 
@@ -26,9 +29,12 @@
         </div>
         
         <!-- <button id="browse-btn">Browse All incidents</button> -->
-        <button id="browse-btn" onclick="location.href='browse.html'">Browse All Incidents
-        </button>
+
+     
+        <button id="browse-btn"  onclick="location.href='browse.html'">Browse All Incidents</button>
+    </form>
     </div>
+
 
    <script src="/Security-App/script.js"></script>
 </body>

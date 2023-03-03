@@ -26,6 +26,15 @@
        
     </div>
     
-    <script src="/Security-App/script.js"></script>
+    <script>
+
+        const newIncident = localStorage.getItem("new-incident");
+
+        let incident = document.createElement("LI")
+
+       incident.textContent = newIncident;
+
+       document.getElementById("full-crime-list").appendChild(incident);
+    </script>
 </body>
 </html>

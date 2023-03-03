@@ -1,13 +1,14 @@
-document.getElementById("submit").addEventListener("click",enterIssue);
-let browse = document.getElementById("browse-btn").addEventListener("click",browseIncidents);
+let add = document.getElementById("submit").addEventListener("click",enterIssue);
 
+let newIncidents = document.getElementById("textarea");
+let form = document.getElementById("form").addEventListener("submit", browseIncidents);
 
 function enterIssue() {
 
     let listItem = document.createElement("LI");  
     //create a list item using document.createElement
 
-    let incident = document.getElementById("textarea").value;
+    let incident = newIncidents.value;
     //get the value of the textarea element input
 
     //assign the value of the list item to the incident
@@ -16,9 +17,9 @@ function enterIssue() {
        let newListItem =    document.getElementById("crime-list").appendChild(listItem);
     //get the id of the parent element and append the child
 
-      clearInput()
-
-      return newListItem
+      // clearInput()
+  
+      // return newListItem
 }
 // enterIssue();
 
@@ -32,8 +33,14 @@ function clearInput(){
 
 
 
-function browseIncidents(){
- console.log("BrowseIncidents");
+function browseIncidents(e){
+  e.preventDefault();
+  let newFullListItem = newIncidents.value;
+
+  localStorage.setItem("new-incident", newFullListItem);
+
+  // let browse = document.getElementById("browse-btn").addEventListener("submit", browseIncidents);
+  // window.location.href = "browse.html";
 
 }
 
@@ -42,7 +49,7 @@ function browseIncidents(){
 //    let newFullListItem = document.createElement("LI");
 
 
-//   let newIncident = document.getElementById("full-crime-list")
+//   let s = document.getElementById("full-crime-list")
 
 //   newFullListItem.textContent = newListItem
    
