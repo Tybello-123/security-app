@@ -1,7 +1,8 @@
-let add = document.getElementById("submit").addEventListener("click",enterIssue);
 
-let newIncidents = document.getElementById("textarea");
-let form = document.getElementById("form").addEventListener("submit", browseIncidents);
+
+let newIncidents = document.getElementById("enter-issue");
+let addBtn = document.getElementById("add-btn").addEventListener("click",enterIssue);
+let browseBtn = document.getElementById("form").addEventListener("submit", browseIncidents);
 
 function enterIssue() {
 
@@ -14,17 +15,17 @@ function enterIssue() {
     //assign the value of the list item to the incident
           listItem.innerHTML = incident;
 
-       let newListItem =    document.getElementById("crime-list").appendChild(listItem);
+        let newListItem =  document.getElementById("crime-list").appendChild(listItem);
     //get the id of the parent element and append the child
-
-      // clearInput()
   
-      // return newListItem
+      return newListItem
+
+      
 }
-// enterIssue();
+
 
 function clearInput(){
-  let clear = document.getElementById("textarea");
+  let clear = document.getElementById("enter-issue");
     if(clear.value !="") {
         clear.value = "";
       
@@ -32,46 +33,22 @@ function clearInput(){
 }
 
 
-
+var items = []
+let newFullListItem = newIncidents.value;
 function browseIncidents(e){
   e.preventDefault();
-  let newFullListItem = newIncidents.value;
 
-  localStorage.setItem("new-incident", newFullListItem);
-
-  // let browse = document.getElementById("browse-btn").addEventListener("submit", browseIncidents);
-  // window.location.href = "browse.html";
 
 }
 
-
-// function browseIncidents() {
-//    let newFullListItem = document.createElement("LI");
-
-
-//   let s = document.getElementById("full-crime-list")
-
-//   newFullListItem.textContent = newListItem
-   
-//   newIncident.appendChild(newListFullItem)
+function store(newFullListItem) {
+  browseIncidents()
 
  
-// }
+    items.push(newFullListItem);
 
-// function list(){
+    sessionStorage.setItem("new-incident", JSON.stringify(newFullListItem));
 
-// }
-
-// list()
-
-
-
-
-
-// if (process.browser) {
-//     console.log("code is running in a browser environment")
-    
-//   } else {
-//     console.log("code is running in a Node.js environment")
-//   }
+    window.location.href = "browse.html"
+}
 

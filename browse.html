@@ -21,7 +21,7 @@
          
         </div>
         
-        <button onclick="location.href='index.html'">Back
+        <button id="back-btn" onclick="location.href='index.html'">Back
         </button>
        
     </div>
@@ -35,6 +35,13 @@
        incident.textContent = newIncident;
 
        document.getElementById("full-crime-list").appendChild(incident);
+
+       document.getElementById("back-btn").addEventListener("click",function(e){
+           e.preventDefault();
+
+           const save =   localStorage.setItem("new-incident", newFullListItem);
+           window.location.href = "index.html";
+       })
     </script>
 </body>
 </html>
